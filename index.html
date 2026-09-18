@@ -9,22 +9,32 @@
 <link rel="apple-touch-icon" href="favicon.png">
 <style>
   :root {
-    /* ZOOM: change this one number to make the logo bigger or smaller (pixels wide on a desktop screen). */
-    --logo-width: 440px;
+    /* SIZE: logo width in pixels. Everything else follows. */
+    --logo-width: 160px;
     --bg: #ffffff;
+    --text: #858585;
   }
   html, body { height: 100%; margin: 0; background: var(--bg); }
   body {
-    display: flex; align-items: center; justify-content: center;
-    padding-bottom: 4vh; box-sizing: border-box;   /* tiny lift so it sits at the optical center */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
   }
-  img {
-    width: min(var(--logo-width), 82vw); height: auto; display: block;
-    user-select: none; -webkit-user-drag: none;
+  main { min-height: 100vh; min-height: 100dvh; display: flex; align-items: center; justify-content: center; }
+  .stack { display: flex; flex-direction: column; align-items: center; gap: 20px; }
+  img { display: block; width: var(--logo-width); height: auto; user-select: none; -webkit-user-drag: none; }
+  h1 {
+    margin: 0; font-weight: 400; font-size: 0.72rem; letter-spacing: 0.32em;
+    color: var(--text); text-transform: uppercase; white-space: nowrap;
   }
+  h1 b { font-weight: 400; font-size: 0.82rem; }
 </style>
 </head>
 <body>
-  <img src="logo.png" alt="The Stone Corner Group" draggable="false">
+<main>
+  <div class="stack">
+    <img src="logo.png" alt="The Stone Corner Group" width="322" height="238" draggable="false">
+    <h1><b>T</b>he <b>S</b>tone<b>C</b>orner <b>G</b>roup</h1>
+  </div>
+</main>
 </body>
 </html>
